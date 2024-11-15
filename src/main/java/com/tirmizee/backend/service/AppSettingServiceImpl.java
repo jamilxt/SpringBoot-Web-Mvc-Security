@@ -32,9 +32,9 @@ public class AppSettingServiceImpl implements AppSettingService {
 	public ApplicationSetting getApplicationSetting() {
 		Map<String, String> mapSetting = getMapSetting();
 		ApplicationSetting applicationSetting = new ApplicationSetting();
-		applicationSetting.setSessionTimeOut(Integer.valueOf(mapSetting.get(Constant.AppSetting.SESSION_TIME_OUT)));
-		applicationSetting.setMaxLoginFail(Integer.valueOf(mapSetting.get(Constant.AppSetting.MAX_LOGIN_FAIL)));
-		applicationSetting.setPasswordChangeDay(Integer.valueOf(mapSetting.get(Constant.AppSetting.PASSWORD_CHANGE_DAY)));
+		applicationSetting.setSessionTimeOut(1000);
+		applicationSetting.setMaxLoginFail(4);
+		applicationSetting.setPasswordChangeDay(2);
 		return applicationSetting;
 	}
 	
